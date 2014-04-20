@@ -47,4 +47,17 @@ describe "Static pages" do
   		expect(page).to have_title("#{base_title} | About Us")
   	end
   end
+
+  describe "Trip page" do
+
+    it "should have the content 'Trip Planner'" do
+      visit '/static_pages/trip'
+      expect(page).to have_content('Trip Planner')
+    end
+
+    it "should have the title 'Trip Planner'" do
+      visit '/static_pages/trip'
+      expect(page).to have_title("#{base_title} | Trip Planner")
+    end
+  end
 end
